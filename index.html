@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="index.css">
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Smythe Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+    <!-- Mobile view -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <h1>Jimmy’s Diner</h1>
+        <h2>The best burgers and pizzas in town.</h2>
+    </header>
+    <main id="main">
+        <!-- Render menu cards -->
+    </main>
+    <footer>
+        <section id="order-detail" class="order-detail hide">
+            <h3 class="medium-font">Your order</h3>
+            <div id="order-list" class="order-list">
+                <!-- Render orders -->
+            </div>
+            <div class="total">
+                <p class="medium-font">Total price:</p>
+                <p id="total-price" class="price">$14</p>
+            </div>
+            <btn id="complete-order" class="complete-order">Complete order</btn>
+        </section>
+        <!-- Payment success -->
+        <section id="payment-success-section" class="payment-success-section hide">
+            <div id="payment-success" class="payment-success">Thanks</div>
+        </section>
+    </footer>
+
+
+    <!-- Payment Modal  -->
+    <div id="payment-modal" class="payment-modal hide">
+        <h1>Enter card details</h1>
+        <img id="loading-payment" class="hide" src="./assets/loading-payment.gif"
+            alt="Payment loading animation with a rotating coin">
+        <form id="payment-form" class="payment-form">
+            <div class="input-group">
+                <input class="form-input" type="text" name="name" id="name" placeholder="Enter your name" required
+                    aria-label="Name">
+                <input class="form-input" type="text" name="cardNumber" id="cardNumber" placeholder="Enter card number"
+                    required aria-label="Card Number">
+                <input class="form-input" type="text" name="cvv" id="cvv" placeholder="Enter CVV" required
+                    aria-label="CVV">
+            </div>
+            <button type="submit" id="submit" class="btn-submit">Pay</button>
+        </form>
+    </div>
+
+    <script src="index.js" type="module"></script>
+</body>
+
+</html>
